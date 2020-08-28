@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.2.0" localization="OSGI-INF/l10n/com.adobe.aem.guides.wknd.spa.react.core.services.SsrRenderingService$Configuration">
+  <OCD id="com.adobe.aem.guides.wknd.spa.react.core.services.SsrRenderingService$Configuration" name="Single Page Applications - Server Side Rendering Configuration" description="URLs of the servers responsible for returning the HTML based on the model data send in request">
+    <AD id="spa.ssr.react.server" type="String" name="React Node Server URL" description="full URL, i.e. http://localhost:4200" default="http://localhost:4200"/>
+    <AD id="ssr.enabled" type="Boolean" name="SSR Enabled" description="Flag to enable/disable SSR rendering" default="false"/>
+  </OCD>
+  <Designate pid="com.adobe.aem.guides.wknd.spa.react.core.services.impl.SsrRenderingServiceImpl">
+    <Object ocdref="com.adobe.aem.guides.wknd.spa.react.core.services.SsrRenderingService$Configuration"/>
+  </Designate>
+</metatype:MetaData>

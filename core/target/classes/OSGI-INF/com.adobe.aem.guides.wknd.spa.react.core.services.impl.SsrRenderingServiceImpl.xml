@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="com.adobe.aem.guides.wknd.spa.react.core.services.impl.SsrRenderingServiceImpl" activate="activate">
+  <property name="spa.ssr.react.server" type="String" value="http://localhost:4200"/>
+  <property name="ssr.enabled" type="Boolean" value="false"/>
+  <property name="sling.servlet.resourceTypes" type="String" value="wknd/spa/ssr"/>
+  <property name="sling.servlet.methods" type="String" value="GET"/>
+  <service>
+    <provide interface="javax.servlet.Servlet"/>
+  </service>
+  <reference name="clientBuilderFactory" interface="org.apache.http.osgi.services.HttpClientBuilderFactory" field="clientBuilderFactory"/>
+  <reference name="modelFactory" interface="org.apache.sling.models.factory.ModelFactory" field="modelFactory"/>
+  <implementation class="com.adobe.aem.guides.wknd.spa.react.core.services.impl.SsrRenderingServiceImpl"/>
+</scr:component>

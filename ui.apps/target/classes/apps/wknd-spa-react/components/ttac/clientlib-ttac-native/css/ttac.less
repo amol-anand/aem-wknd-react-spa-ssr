@@ -1,0 +1,40 @@
+@COLOR: #000000;
+@DEFAULT_H2_FONT_SIZE: 1.5em;
+@DEFAULT_FG: #222831;
+@DEFAULT_BG: #ffffff;
+
+.ttac {
+  display: block;
+  width: 100%;
+  color: @COLOR;
+
+  &__title {
+    margin: 0 auto 15px;
+    color: inherit;
+    font-size: @DEFAULT_H2_FONT_SIZE;
+  }
+
+  &__text {
+    margin: 0 auto 15px;
+    color: inherit;
+  }
+
+  &__cta {
+    display: inline-block;
+    border-width: 2px;
+    border-style: solid;
+    border-color: @DEFAULT_FG;
+    color: @DEFAULT_FG;
+    background: @DEFAULT_BG;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+    transition: 250ms ease;
+    line-height: 1;
+    &:hover {
+      background: @DEFAULT_FG;
+      color: @DEFAULT_BG;
+    }
+  }
+}

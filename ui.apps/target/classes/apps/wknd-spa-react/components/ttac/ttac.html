@@ -1,0 +1,15 @@
+<!-- /* An HTL Component for representing a relatively basic element of a page, a title/text/CTA element */ -->
+<sly data-sly-use.model="com.adobe.aem.guides.wknd.spa.react.core.models.TtacModel"></sly>
+
+<div data-sly-test="${model.empty}">
+  [Click to configure TTAC component...]
+</div>
+
+<div class="ttac" data-sly-test="${!model.empty}">
+  <img data-sly-test="${model.image}" src="${model.image}" />
+  <h2 class="ttac__title" data-sly-test="${model.title}">${model.title}</h2>
+  <div class="ttac__text" data-sly-test="${model.text}">${model.text}</div>
+  <a class="ttac__cta" data-sly-test="${model.ctaHref}" href="${model.ctaHref}">
+    ${model.ctaText}
+  </a>
+</div>
